@@ -14,5 +14,5 @@ use Illuminate\Foundation\Inspiring;
 */
 
 Artisan::command('inspire', function () {
-    $this->comment(Inspiring::quote());
+    factory(App\Models\Lunch::class, 20)->create();
 })->describe('Display an inspiring quote');

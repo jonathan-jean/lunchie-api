@@ -18,9 +18,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::get('/restaurants', "RestaurantController@index")->middleware('auth:api');
+Route::get('/restaurants', "RestaurantController@index");
 
 Route::get('/user/lunches', "LunchController@scheduled")->middleware('auth:api');
+
 Route::get('/lunches', "LunchController@search")->middleware('auth:api');
 Route::post('/lunches', "LunchController@create")->middleware('auth:api');
 Route::delete('/lunches/{lunch}', "LunchController@delete")->middleware('auth:api');
